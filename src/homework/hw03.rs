@@ -7,11 +7,11 @@ fn main() {
     for y in 0..HEIGHT {
         for x in 0..WIDTH {
             let row1 = y==0;
-            let rowN = y==HEIGHT-1;
+            let row_n = y==HEIGHT-1;
             let col1 = x==0;
-            let colN = x==WIDTH-1;
-            let is_hor = row1 || rowN;
-            let is_ver = col1 || colN;
+            let col_n = x==WIDTH-1;
+            let is_hor = row1 || row_n;
+            let is_ver = col1 || col_n;
             let is_diag1 = x==(y as f32 * k) as u32;
             let is_diag2 = x == WIDTH-1-(y as f32 * k) as u32;
             let sum = if is_hor || is_ver || is_diag1 || is_diag2 {
